@@ -1,0 +1,45 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "globals": {
+    "beforeEach": true,
+    "describe": true,
+    "expect": true,
+    "it": true,
+    "jest": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/camelcase": "error",
+    "@typescript-eslint/explicit-function-return-type": ["error", {
+      "allowExpressions": true,
+      "allowHigherOrderFunctions": true
+    }],
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-inferrable-types": ["error", { "ignoreParameters": true }],
+    "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "indent": 0,
+    "max-len": ["error", { "code": 120, "ignoreTemplateLiterals": true }],
+    "no-param-reassign": [2, { "props": false }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-restricted-imports": ["error", "lodash", "recompose"]
+  },
+  "overrides": []
+}
